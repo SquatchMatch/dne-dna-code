@@ -15,9 +15,9 @@ def deploy():
         "templateId": "af2c57dc-769f-47af-9f36-96a12746286a",
         "targetInfo": [
             {
-                "id": "10.10.20.82",
+                "id": "10.10.20.178",
                 "type": "MANAGED_DEVICE_IP",
-                "params": {"description": "changed by DNA Center {}".format(time.time()), "interface": "TenGigabitEthernet1/1/1"}
+                "params": {"description": "changed by DNA Center {}".format(time.time()), "interface": "GigabitEthernet1/0/8"}
             }
         ]
     }

@@ -24,7 +24,7 @@ def get_auth_token():
     """
     url = 'https://{}/dna/system/api/v1/auth/token'.format(DNAC_URL)                      # Endpoint URL
     hdr = {'content-type' : 'application/json'}                                           # Define request header
-    resp = requests.post(url, auth=HTTPBasicAuth(DNAC_USER, DNAC_PASS), headers=hdr)      # Make the POST Request
+    resp = requests.post(url, auth=HTTPBasicAuth(DNAC_USER, DNAC_PASS), headers=hdr, verify=False)      # Make the POST Request
     token = resp.json()['Token']                                                          # Retrieve the Token
     print("Token Retrieved: {}".format(token))                                            # Print out the Token
     return token    # Create a return statement to send the token back for later use
